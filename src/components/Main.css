@@ -14,3 +14,24 @@
     overflow: auto;
     scroll-behavior: smooth;
 }
+
+.Container{
+    width:90%;
+    margin : 0 auto;
+}
+.movie_poster{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.movie_poster .card {
+    margin: 10px 5px;
+    min-width: 130px;
+    width:200px;
+  }
+
+  .movie_poster .card:hover{
+    box-shadow:  4px 3px 19px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 3px 19px -4px rgba(0,0,0,0.75);
+    box-shadow: 4px 3px 19px -4px rgba(0,0,0,0.75);
+  }

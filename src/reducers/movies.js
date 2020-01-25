@@ -1,9 +1,9 @@
-import { FETCH_CONFIG_SUCCESS } from "../actions";
+import { FETCH_MOVIE_SUCCESS } from "../actions";
 
-const initState = {};
+const initState = [];
 export default (state = initState, action) => {
   switch (action.type) {
-    case FETCH_CONFIG_SUCCESS:
+    case FETCH_MOVIE_SUCCESS:
       return action.data;
     default:
       return state;

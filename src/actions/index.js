@@ -20,6 +20,7 @@ import {
   URL_MOVIES_NOW_PLAYING,
   URL_MOVIES_TOP_RATED,
   URL_MOVIE,
+  URL_MOVIE_LIST,
   MOVIE_APPEND_PARAMETER,
   API_KEY_PARAM as API_KEY,
   API_KEY_ALT_PARAM as API_KEY_ALT,
@@ -254,6 +255,15 @@ function fetchMovieFail(error) {
   };
 }
 
+export function fetchMoviesInit(){
+  return dispatch =>{
+    dispatch(fetchMovies());
+    return fetchJson(URL_MOVIE_LIST + API_KEY)
+    .then(json => dispatch(fetchMovieSuccess(json.results)))
+    .catch(error => dispatch(fetchMoviesFail(error.message)));
+  };
+}
+
 export function fetchMovieDetail(id) {
   const url_movie = URL_MOVIE + id + API_KEY + MOVIE_APPEND_PARAMETER;
   return dispatch => {
@@ -296,3 +306,8 @@ export function fetchReviewsList(id) {
       .catch(error => dispatch(fetchReviewsFail(error.message)));
   };
 }
+
+
+
+
+

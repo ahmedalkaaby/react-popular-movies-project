@@ -12,6 +12,7 @@ import {
   TOGGLE_SETTINGS_MODAL
 } from "../actions";
 
+
 import { MOVIES_CATEGORIES, LANGUAGES } from "../constants";
 
 const settings = JSON.parse(window.localStorage.getItem("settings")) || {};

@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import configStore, { history } from "./store";
 import { ConnectedRouter } from "connected-react-router";
 import { APP_NAME } from "./constants";
-import { fetchConfigurations, fetchGenresList } from "./actions";
+import { fetchConfigurations, fetchGenresList,fetchMoviesList } from "./actions";
 
 if (process.env.NODE_ENV === "production") {
   disableReactDevTools();
