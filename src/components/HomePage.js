@@ -18,6 +18,7 @@ return <>
      <Card.Img src={URL_IMAGE_BASE + item.poster_path}  variant="top"/>
      <Card.Body>
      <h4>{item.title}</h4>
+     <h4>............</h4>
      <h5>{item.release_date}</h5>
      </Card.Body>
      </Card></Link>

@@ -208,9 +208,9 @@ export function fetchMoviesList() {
     let url;
 
     switch (category) {
-      case MOVIES_CATEGORIES.LATEST.code:
-        url = URL_MOVIES_LATEST;
-        break;
+      // case MOVIES_CATEGORIES.LATEST.code:
+      //   url = URL_MOVIES_LATEST;
+      //   break;
       case MOVIES_CATEGORIES.UPCOMING.code:
         url = URL_MOVIES_UPCOMING;
         break;

@@ -24,17 +24,21 @@ const SettingsModal = props => {
   const dispatch = useDispatch();
 
   const handleClose = () => dispatch(toggleSettingsModal(false));
-  const onSelectLanguage = selectedLanguage =>
+  const onSelectLanguage = selectedLanguage =>{
     dispatch(
       changeLanguage(find(LANGUAGES, lang => lang.code === selectedLanguage))
     );
+    handleClose();
+  }
 
-  const onSelectCategory = selectedCategory =>
+  const onSelectCategory = selectedCategory =>{
     dispatch(
       changeCategory(
         find(MOVIES_CATEGORIES, cat => cat.code === selectedCategory)
       )
     );
+    handleClose();
+      }
 
   return (
     <>
@@ -66,7 +70,7 @@ const SettingsModal = props => {
           </Row>
           <Row className="mb-2">
             <Col xs={4}>Default Category:</Col>
-            <Col xs={6}>
+            <Col xs={4}>
               <DropdownButton
                 size="sm"
                 variant="secondary"

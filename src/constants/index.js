@@ -40,7 +40,7 @@ export const MOVIE_LANG_PARAMETER_AR = "&language=ar";
 
 export const MOVIES_CATEGORIES = {
   POPULAR: { code: "POPULAR", name_en: "Popular", name_ar: "شائع" },
-  LATEST: { code: "LATEST", name_en: "Latest", name_ar: "احدث الافلام" },
+  // LATEST: { code: "LATEST", name_en: "Latest", name_ar: "احدث الافلام" },
   UPCOMING: { code: "UPCOMING", name_en: "Upcoming", name_ar: "القادمة قريبا" },
   TOP_RATED: {
     code: "TOP_RATED",
