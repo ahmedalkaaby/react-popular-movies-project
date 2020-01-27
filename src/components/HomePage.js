@@ -14,14 +14,16 @@ return <>
 <div className="Container">
 <div className="movie_poster">
    {Movies.map(item=>
-    <Link to={"/movie/" + item.id}><Card>
-     <Card.Img src={URL_IMAGE_BASE + item.poster_path}  variant="top"/>
-     <Card.Body>
-     <h4>{item.title}</h4>
-     <h4>............</h4>
-     <h5>{item.release_date}</h5>
-     </Card.Body>
-     </Card></Link>
+    <Link to={"/movie/" + item.id} style={{textDecoration: 'none'}}>
+    <Card>
+      <Card.Img src={URL_IMAGE_BASE + item.poster_path}  variant="top"/>
+        <Card.Body>
+          <h4>{item.title}</h4>
+          <h4>............</h4>
+          <h5>{item.release_date}</h5>
+        </Card.Body>
+      </Card>
+     </Link>
    )} 
    </div>
   </div>

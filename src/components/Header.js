@@ -15,13 +15,15 @@ const Header = ({ appName, className }) => {
   return (
     <Navbar variant="dark" bg="dark" sticky="top" className={className}>
       <Logo appName={appName} />
-      <Button
+      <Button 
         variant="link"
         onClick={showSettings}
         className="p-0 mr-3 text-secondary"
       >
         <FontAwesomeIcon icon={faCog} />
       </Button>
+      
+
       <SearchForm />
     </Navbar>
   );
